@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://bxi01ejsyafq4"]
+
+[ext_resource type="Texture2D" uid="uid://c1jipcvrpfxbw" path="res://assets/char/kiki_base.png" id="1_vy3ed"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mfrmf"]
+atlas = ExtResource("1_vy3ed")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oiqon"]
+atlas = ExtResource("1_vy3ed")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1hwy3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mfrmf")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oiqon")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="kiki" type="CharacterBody2D" unique_id=52257502]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1293094387]
+sprite_frames = SubResource("SpriteFrames_1hwy3")
+animation = &"walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2108301366]
