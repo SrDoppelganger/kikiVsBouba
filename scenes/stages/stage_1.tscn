@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bwpsih3nesaex" path="res://assets/backgrounds/stage1-background.png" id="2_8q8ih"]
 [ext_resource type="PackedScene" uid="uid://n3m6t50pe06m" path="res://scenes/chars/bouba.tscn" id="2_cuow7"]
 [ext_resource type="Texture2D" uid="uid://mqhi1ogibhrb" path="res://assets/backgrounds/stage1-ground.png" id="3_8q8ih"]
+[ext_resource type="PackedScene" uid="uid://bxi01ejsyafq4" path="res://scenes/chars/kiki.tscn" id="4_k45mu"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_cuow7"]
 distance = 11.0
@@ -28,13 +29,17 @@ texture = ExtResource("3_8q8ih")
 position = Vector2(0, 152)
 shape = SubResource("WorldBoundaryShape2D_cuow7")
 
-[node name="Bouba" parent="." unique_id=111853081 instance=ExtResource("2_cuow7")]
-position = Vector2(-268, 11)
-
-[node name="Camera2D" type="Camera2D" parent="Bouba" unique_id=498270511]
-position = Vector2(262, -10)
+[node name="Camera2D" type="Camera2D" parent="." unique_id=498270511]
+position = Vector2(-6, 1)
 zoom = Vector2(2, 2)
 limit_bottom = 190
 limit_smoothed = true
 drag_horizontal_enabled = true
 drag_horizontal_offset = 0.2
+
+[node name="Bouba" parent="." unique_id=111853081 instance=ExtResource("2_cuow7")]
+position = Vector2(-127, 74)
+
+[node name="kiki" parent="." unique_id=52257502 instance=ExtResource("4_k45mu")]
+position = Vector2(127, 73)
+scale = Vector2(-1, 1)
